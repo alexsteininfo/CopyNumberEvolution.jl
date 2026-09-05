@@ -427,3 +427,14 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Julia
+Manifest.toml
+/docs/build/
+/docs/Manifest.toml
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+
+# Never commit real data — see docs/superpowers/specs/2026-09-04-copynumberevolution-design.md §14
+data/

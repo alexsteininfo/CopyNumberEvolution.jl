@@ -1,0 +1,28 @@
+name = "CopyNumberEvolution"
+uuid = "a7fad464-da36-487c-8111-789b46084000"
+authors = ["Alexander Stein <alexander.stein@vib.be>"]
+version = "0.1.0"
+
+[deps]
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
+
+[weakdeps]
+MutationLoadDynamics = "7b855ee6-6887-412f-a571-26d20a5a92d7"
+
+[extensions]
+CopyNumberEvolutionMutationLoadDynamicsExt = "MutationLoadDynamics"
+
+[compat]
+Distributions = "0.25"
+StatsBase = "0.33, 0.34"
+julia = "1.10"
+
+[extras]
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+REPL = "3fa0cd96-eef1-5676-8a61-b3b8758bbffb"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Distributions", "REPL", "Test"]
