@@ -438,3 +438,11 @@ Manifest.toml
 
 # Never commit real data — see docs/superpowers/specs/2026-09-04-copynumberevolution-design.md §14
 data/
+
+# ...but the synthetic assembly reference tables under test/data/ ARE part of the suite.
+# They are 24-row chromosome length/centromere tables transcribed from public UCSC files,
+# not patient data, and test/test_assembly.jl asserts the shipped hg38/hg19 tables against
+# them. The rule above is unanchored, so it matches test/data/ too; this re-includes the
+# directory. Negating the DIRECTORY is required — git will not descend into an excluded
+# directory, so a pattern like !test/data/*.tsv on its own would have no effect.
+!test/data/
