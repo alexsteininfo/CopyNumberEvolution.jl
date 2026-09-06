@@ -436,7 +436,8 @@ Manifest.toml
 *.jl.*.cov
 *.jl.mem
 
-# Never commit real data — see docs/superpowers/specs/2026-09-04-copynumberevolution-design.md §14
+# Never commit real data. Fixtures are synthetic and small; real data lives only in
+# study repos, and only where the data agreement permits.
 data/
 
 # ...but the synthetic assembly reference tables under test/data/ ARE part of the suite.
@@ -446,3 +447,10 @@ data/
 # directory. Negating the DIRECTORY is required — git will not descend into an excluded
 # directory, so a pattern like !test/data/*.tsv on its own would have no effect.
 !test/data/
+
+# Claude Code / superpowers working files — local only, not part of the package.
+# `.superpowers/` is the agent workspace (ledgers, per-task briefs and reports);
+# `docs/superpowers/` holds the design spec and implementation plan.
+.superpowers/
+docs/superpowers/
+.claude/
