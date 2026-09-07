@@ -88,6 +88,18 @@ scientific consequences of its defaults, the output and projection rules, MEDICC
 interoperability, and the open questions. `literature/MEDICC2.md` holds detailed notes
 on the reference method.
 
+## Examples
+
+Five runnable scripts in `examples/`, each self-contained:
+
+```bash
+julia --project examples/01_quickstart.jl               # tree -> profiles -> files
+julia --project examples/02_per_division_vs_per_time.jl # the Markov-vs-not question
+julia --project examples/03_subclonal_wgd.jl             # mrca-scheduled WGD, :multiply vs :increment
+julia --project examples/04_viability_rejection.jl       # AllowAll vs RejectAndRedraw
+julia --project examples/05_newick_and_medicc2.jl        # newick in, MEDICC2 export out
+```
+
 ## Open questions
 
 Documented rather than silently settled — see the manual's Limitations page:
